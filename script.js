@@ -1,3 +1,3 @@
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from '@vercel/analytics';
 
-Analytics.track("page_view", { page: "Golden Batch Resource Hub" });
+inject();
