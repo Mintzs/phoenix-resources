@@ -38,7 +38,7 @@ main {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 6rem 0; /* Increased padding since we removed header */
+    padding: 6rem 0; 
 }
 .gradient-bg {
     position: absolute;
@@ -73,7 +73,7 @@ main {
     margin: 0 auto;
 }
 .hero h1 {
-    font-size: 3.5rem; /* Slightly larger since it's now the main title */
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
     -webkit-background-clip: text;
@@ -85,7 +85,7 @@ main {
     margin-bottom: 2rem;
     line-height: 1.6;
 }
-/* Stats - simplified */
+/* Stats */
 .stats {
     display: flex;
     justify-content: center;
@@ -134,14 +134,25 @@ input::placeholder {
     padding-left: 0.5rem;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
 /* File Grid */
 .file-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
-    width: 100%; /* Ensure the grid takes up the full width of its parent */
-    margin: 0 auto; /* Center the grid horizontally */
+    width: 100%;
+    margin: 0 auto;
 }
+
 /* File Card */
 .file-card {
     background-color: var(--color-bg-secondary);
@@ -221,6 +232,7 @@ a, a:active, a:visited{
 .open-button:hover {
     color: var(--gradient-middle);
 }
+
 /* Footer */
 footer {
     background-color: var(--color-bg);
@@ -253,6 +265,7 @@ footer p {
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-border);
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
